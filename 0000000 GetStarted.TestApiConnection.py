@@ -4,7 +4,7 @@
 # 请确保你已经在 .env 文件中配置了 OPENAI_API_KEY 和 OPENAI_API_BASE 两个环境变量
 ## .env文件就是放在与本脚本同一个目录中，没有名字，后缀为.env的文件
 ## 文件内容为：
-## OPENAI_API_KEY="你的API_KEY"（格式为双引号包裹的一个key，例如"sk-TufGVICcOLQzTb2awerfeSeGJq2rf3ae53Rcz4eg4JPlQ"）
+## OPENAI_API_KEY="你的API_KEY"（格式为双引号包裹的一个key，例如"sk-TuEGVefICcOLasfeQzTb2awerfeSeGJq2rf3ae53Rcz4eg4JPlQ"）
 ## OPENAI_API_BASE="你的API_BASE"（格式为双引号包裹的一个url，例如"https://api.openai.com"，"https://api.fe8.cn/v1"）
 ## 请注意，这两个环境变量的值都是需要加双引号的，否则会报错
 ## 如果拿不准API_BASE的值是否正确，可以在浏览器中拷贝输入此此地址，比如"https://api.openai.com"，会看到如下信息：

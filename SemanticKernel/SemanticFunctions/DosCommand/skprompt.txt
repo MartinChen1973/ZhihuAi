@@ -1,0 +1,4 @@
+把用户的指令转换为Dos指令。
+Output the Dos Command directly, without any analysis or comments.
+
+{{$input}}

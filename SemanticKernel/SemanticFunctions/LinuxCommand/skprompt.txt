@@ -1,0 +1,4 @@
+Transfer the user's command to Linux Command.
+Output the linux command directly, without any analysis, comments.
+
+{{$input}}

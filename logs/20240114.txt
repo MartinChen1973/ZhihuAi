@@ -1,0 +1,56 @@
+2024-01-14 16:15:47.774 | INFO     | metagpt.config:get_default_llm_provider_enum:124 - LLMProviderEnum.OPENAI Model: gpt-3.5-turbo
+2024-01-14 16:15:47.786 | INFO     | metagpt.config:get_default_llm_provider_enum:126 - API: LLMProviderEnum.OPENAI
+2024-01-14 16:15:47.798 | DEBUG    | metagpt.config:_ensure_workspace_exists:227 - WORKSPACE_PATH set to W:\ProjectsPython\ZhihuAi\workspace
+2024-01-14 16:15:47.799 | DEBUG    | metagpt.config:__init__:85 - Config loading done.
+2024-01-14 16:15:53.376 | INFO     | __main__:main:143 - write a function that calculates the product of a list
+2024-01-14 16:15:53.384 | INFO     | metagpt.config:get_default_llm_provider_enum:124 - LLMProviderEnum.OPENAI Model: gpt-3.5-turbo
+2024-01-14 16:15:53.387 | INFO     | metagpt.config:get_default_llm_provider_enum:126 - API: LLMProviderEnum.OPENAI
+2024-01-14 16:15:53.469 | INFO     | metagpt.config:get_default_llm_provider_enum:124 - LLMProviderEnum.OPENAI Model: gpt-3.5-turbo
+2024-01-14 16:15:53.476 | INFO     | metagpt.config:get_default_llm_provider_enum:126 - API: LLMProviderEnum.OPENAI
+2024-01-14 16:15:53.537 | INFO     | metagpt.config:get_default_llm_provider_enum:124 - LLMProviderEnum.OPENAI Model: gpt-3.5-turbo
+2024-01-14 16:15:53.542 | INFO     | metagpt.config:get_default_llm_provider_enum:126 - API: LLMProviderEnum.OPENAI
+2024-01-14 16:15:53.602 | INFO     | metagpt.team:invest:86 - Investment: $3.0.
+2024-01-14 16:15:53.610 | DEBUG    | metagpt.environment:publish_message:108 - publish_message: {"id":"0489b9c1772246d082e3e7d511a50dc9","content":"write a function that calculates the product of a list","role":"Human","cause_by":"metagpt.actions.add_requirement.UserRequirement","sent_from":"","send_to":["<all>"]}
+2024-01-14 16:15:53.611 | DEBUG    | metagpt.team:run:130 - max n_round=4 left.
+2024-01-14 16:15:53.612 | DEBUG    | metagpt.roles.role:_observe:397 - Alice(SimpleCoder) observed: ['Human: write a function tha...']
+2024-01-14 16:15:53.612 | DEBUG    | metagpt.roles.role:_set_state:289 - actions=[SimpleWriteCode], state=0
+2024-01-14 16:15:53.612 | DEBUG    | metagpt.roles.role:_react:428 - Alice(SimpleCoder): self.rc.state=0, will do SimpleWriteCode
+2024-01-14 16:15:53.612 | INFO     | metagpt.roles.role:_act:357 - Alice(SimpleCoder): to do SimpleWriteCode(SimpleWriteCode)
+2024-01-14 16:15:53.680 | DEBUG    | metagpt.roles.role:run:479 - Bob(SimpleTester): no news. waiting.
+2024-01-14 16:15:53.680 | DEBUG    | metagpt.roles.role:run:479 - Charlie(SimpleReviewer): no news. waiting.
+2024-01-14 16:16:00.901 | INFO     | metagpt.utils.cost_manager:update_cost:48 - Total running cost: $0.000 | Max budget: $10.000 | Current cost: $0.000, prompt_tokens: 65, completion_tokens: 0
+2024-01-14 16:16:00.905 | DEBUG    | metagpt.roles.role:_set_state:289 - actions=[SimpleWriteCode], state=-1
+2024-01-14 16:16:00.905 | DEBUG    | metagpt.environment:publish_message:108 - publish_message: {"id":"5560daa1d387481aacf8d425237b8a6f","content":"","role":"SimpleCoder","cause_by":"__main__.SimpleWriteCode","sent_from":"__main__.SimpleCoder","send_to":["<all>"]}
+2024-01-14 16:16:00.905 | DEBUG    | metagpt.environment:run:132 - is idle: False
+2024-01-14 16:16:00.905 | DEBUG    | metagpt.team:run:130 - max n_round=3 left.
+2024-01-14 16:16:00.906 | DEBUG    | metagpt.roles.role:run:479 - Alice(SimpleCoder): no news. waiting.
+2024-01-14 16:16:00.906 | DEBUG    | metagpt.roles.role:_observe:397 - Bob(SimpleTester) observed: ['SimpleCoder: ...']
+2024-01-14 16:16:00.906 | DEBUG    | metagpt.roles.role:_set_state:289 - actions=[SimpleWriteTest], state=0
+2024-01-14 16:16:00.906 | DEBUG    | metagpt.roles.role:_react:428 - Bob(SimpleTester): self.rc.state=0, will do SimpleWriteTest
+2024-01-14 16:16:00.906 | INFO     | __main__:_act:96 - Bob(SimpleTester): to do SimpleWriteTest(SimpleWriteTest)
+2024-01-14 16:16:00.915 | DEBUG    | metagpt.roles.role:run:479 - Charlie(SimpleReviewer): no news. waiting.
+2024-01-14 16:16:02.991 | INFO     | metagpt.utils.cost_manager:update_cost:48 - Total running cost: $0.000 | Max budget: $10.000 | Current cost: $0.000, prompt_tokens: 84, completion_tokens: 0
+2024-01-14 16:16:02.995 | DEBUG    | metagpt.roles.role:_set_state:289 - actions=[SimpleWriteTest], state=-1
+2024-01-14 16:16:02.995 | DEBUG    | metagpt.environment:publish_message:108 - publish_message: {"id":"28fed12b70a4406c98d90b219b86afd0","content":"","role":"SimpleTester","cause_by":"__main__.SimpleWriteTest","sent_from":"","send_to":["<all>"]}
+2024-01-14 16:16:02.995 | DEBUG    | metagpt.environment:run:132 - is idle: False
+2024-01-14 16:16:02.995 | DEBUG    | metagpt.team:run:130 - max n_round=2 left.
+2024-01-14 16:16:02.996 | DEBUG    | metagpt.roles.role:run:479 - Alice(SimpleCoder): no news. waiting.
+2024-01-14 16:16:02.996 | DEBUG    | metagpt.roles.role:run:479 - Bob(SimpleTester): no news. waiting.
+2024-01-14 16:16:02.996 | DEBUG    | metagpt.roles.role:_observe:397 - Charlie(SimpleReviewer) observed: ['SimpleTester: ...']
+2024-01-14 16:16:02.996 | DEBUG    | metagpt.roles.role:_set_state:289 - actions=[SimpleWriteReview], state=0
+2024-01-14 16:16:02.996 | DEBUG    | metagpt.roles.role:_react:428 - Charlie(SimpleReviewer): self.rc.state=0, will do SimpleWriteReview
+2024-01-14 16:16:02.996 | INFO     | metagpt.roles.role:_act:357 - Charlie(SimpleReviewer): to do SimpleWriteReview(SimpleWriteReview)
+2024-01-14 16:16:04.526 | INFO     | metagpt.utils.cost_manager:update_cost:48 - Total running cost: $0.000 | Max budget: $10.000 | Current cost: $0.000, prompt_tokens: 63, completion_tokens: 0
+2024-01-14 16:16:04.529 | DEBUG    | metagpt.roles.role:_set_state:289 - actions=[SimpleWriteReview], state=-1
+2024-01-14 16:16:04.529 | DEBUG    | metagpt.environment:publish_message:108 - publish_message: {"id":"0442f06f0f5d4f05b774b5512a55639d","content":"","role":"SimpleReviewer","cause_by":"__main__.SimpleWriteReview","sent_from":"__main__.SimpleReviewer","send_to":["<all>"]}
+2024-01-14 16:16:04.529 | DEBUG    | metagpt.environment:run:132 - is idle: False
+2024-01-14 16:16:04.529 | DEBUG    | metagpt.team:run:130 - max n_round=1 left.
+2024-01-14 16:16:04.529 | DEBUG    | metagpt.roles.role:run:479 - Alice(SimpleCoder): no news. waiting.
+2024-01-14 16:16:04.529 | DEBUG    | metagpt.roles.role:run:479 - Bob(SimpleTester): no news. waiting.
+2024-01-14 16:16:04.530 | DEBUG    | metagpt.roles.role:run:479 - Charlie(SimpleReviewer): no news. waiting.
+2024-01-14 16:16:04.530 | DEBUG    | metagpt.environment:run:132 - is idle: True
+2024-01-14 16:16:04.530 | DEBUG    | metagpt.team:run:130 - max n_round=0 left.
+2024-01-14 16:16:04.530 | DEBUG    | metagpt.roles.role:run:479 - Alice(SimpleCoder): no news. waiting.
+2024-01-14 16:16:04.530 | DEBUG    | metagpt.roles.role:run:479 - Bob(SimpleTester): no news. waiting.
+2024-01-14 16:16:04.530 | DEBUG    | metagpt.roles.role:run:479 - Charlie(SimpleReviewer): no news. waiting.
+2024-01-14 16:16:04.530 | DEBUG    | metagpt.environment:run:132 - is idle: True
