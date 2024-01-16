@@ -1,0 +1,5 @@
+prompt = """对话历史如下:
+{{$history}}
+---
+User: {{$request}}
+Assistant:  """

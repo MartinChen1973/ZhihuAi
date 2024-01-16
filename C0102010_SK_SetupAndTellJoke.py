@@ -30,13 +30,13 @@ import asyncio
 # 定义 semantic function
 # 参数由{{ }}标识
 # prompt = "给我讲个关于{{$input}}的笑话吧"
-# prompt = "给我推荐一个能补充{{$input}}的食物吧"
-prompt = "给帮我推荐一个能治疗{{$input}}的药方吧"
+prompt = "给我推荐一个能补充{{$input}}的食物吧"
+# prompt = "给帮我推荐一个能治疗{{$input}}的药方吧"
 tell_me_about = kernel.create_semantic_function(prompt)
 # 等待用户输入要讲的笑话内容
 # input_str = input("你想听什么笑话呢？")
-# input_str = input("你想补充哪方面的营养呢？")
-input_str = input("你想治疗什么疾病呢？")
+input_str = input("你想补充哪方面的营养呢？")
+# input_str = input("你想治疗什么疾病呢？")
 
 # 运行 function 看结果
 async def run_function():
