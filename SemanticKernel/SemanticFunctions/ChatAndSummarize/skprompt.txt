@@ -1,0 +1,6 @@
+"""User 与 Assistant 的对话历史摘要如下:
+{{ChatHistorySkill.summarize $history}}
+---
+User: {{$request}}
+Assistant:
+"""

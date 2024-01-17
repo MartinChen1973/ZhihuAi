@@ -1,0 +1,7 @@
+请将以下 User 与 Assistant 的对话生成一个简短的摘要。
+确保你的摘要中包含完整的信息。
+<dialog>
+{{$history}}
+</dialog>
+摘要：
+"""

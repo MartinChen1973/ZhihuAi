@@ -1,5 +1,6 @@
 prompt = """对话历史如下:
 {{$history}}
+请根据User的内容，持续与之对话。
 ---
 User: {{$request}}
 Assistant:  """
