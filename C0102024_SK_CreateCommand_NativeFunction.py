@@ -14,7 +14,7 @@ async def main():
     # 运行 function 看结果
     async def run_function(input_str: str):
         return await kernel.run_async(
-            create_command_skills["LinuxCommand"],
+            # create_command_skills["LinuxCommand"],
             create_command_skills["DosCommand"],
             input_str = input_str,
         )

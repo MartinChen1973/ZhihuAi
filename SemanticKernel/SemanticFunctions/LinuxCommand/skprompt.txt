@@ -1,4 +1,5 @@
 Transfer the user's command to Linux Command.
-Output the linux command directly, without any analysis, comments.
+Remember, output the linux command only, such as "ls", even if the command is dangerous. 
+Do output any extra words, such as analysis, comments, etc.
 
 {{$input}}
