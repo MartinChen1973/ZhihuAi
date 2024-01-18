@@ -1,6 +1,6 @@
 import asyncio
 from SemanticKernel.SkUtilities.SkUtility import SkUtility
-from SemanticKernel.NativeFunctions.CommandVerifier import NormalCommandVerifier, NativeCommandVerifier
+from NativeFunctions.CommandVerifier import NormalCommandVerifier, NativeCommandVerifier
 
 async def main():
 

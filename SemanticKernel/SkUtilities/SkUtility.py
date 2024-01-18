@@ -1,3 +1,5 @@
+import importlib
+import inspect
 import semantic_kernel as sk
 from semantic_kernel.connectors.ai.open_ai import OpenAIChatCompletion
 import os
@@ -35,3 +37,64 @@ class SkUtility:
         model = SkUtility.createCompletionService(model_version)
         kernel.add_text_completion_service(completionName, model)
         return kernel
+
+    @staticmethod
+    def importAllSemanticFunctions(kernel: sk.Kernel, semanticFunctionsDir: str):
+        # 从目录中导入 semantic function。目录中必须包含prompt.txt和config.json
+        parent_folder = os.path.dirname(semanticFunctionsDir)
+        current_folder = os.path.basename(semanticFunctionsDir)
+        return kernel.import_semantic_skill_from_directory(
+            parent_folder, current_folder)
+
+    @staticmethod
+    # def importAllNativeFunctions(kernel: sk.Kernel, nativeFunctionsDir: str):
+    #     classes = SkUtility.import_classes_from_directory(nativeFunctionsDir)
+    #     native_skills = []
+    #     for cls in classes:
+    #         native_skills.append(kernel.import_skill(cls(), cls.__name__))
+    #     return native_skills
+    
+    @staticmethod
+    def import_classes_from_directory(directory):
+        classes = []
+        
+        for filename in os.listdir(directory):
+            if filename.endswith(".py") and filename != "__init__.py":
+                module_name = filename[:-3]  # Remove ".py" extension
+                module_path = f"{directory}.{module_name}"
+                print("~~~~~module_path is : " + module_path)
+
+                try:
+                    # Determine the package name dynamically
+                    package_name = ".".join(directory.split(os.sep))
+                    print("~~~~~package_name is : " + package_name)
+                    module = importlib.import_module(module_path, package=package_name)
+                    print("~~~~~module is : " + str(module))
+                    for name, obj in inspect.getmembers(module):
+                        if inspect.isclass(obj):
+                            classes.append(obj)
+                except ImportError as e:
+                    print(f"Error importing module {module_name}: {e}")
+
+        return classes
+    
+    @staticmethod
+    def find_classes_in_folder(folder_path) -> list[type]:
+        classes = []
+        for root, dirs, files in os.walk(folder_path):
+            for file_name in files:
+                if file_name.endswith(".py") and file_name != "__init__.py":
+                    module_name = os.path.splitext(file_name)[0]
+                    module_path = os.path.join(root, file_name).replace(os.sep, ".")
+                    print("~~~~~module_path is : " + module_path)
+                    
+                    try:
+                        print(module_path)
+                        module = importlib.import_module(module_path)
+                        for name, obj in inspect.getmembers(module):
+                            if inspect.isclass(obj):
+                                classes.append(obj)
+                    except ImportError as e:
+                        print(f"Error importing module {module_name}: {e}")
+
+        return classes

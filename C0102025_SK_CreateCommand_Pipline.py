@@ -2,7 +2,7 @@
 # pipleline可以顺序执行多个 function，每个 function 的输入是上一个 function 的输出。
 import asyncio
 from SemanticKernel.SkUtilities.SkUtility import SkUtility
-from SemanticKernel.NativeFunctions.CommandVerifier import NativeCommandVerifier
+from NativeFunctions.CommandVerifier import NativeCommandVerifier
 
 async def main():
 

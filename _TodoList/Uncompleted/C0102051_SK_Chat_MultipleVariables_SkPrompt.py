@@ -7,6 +7,16 @@ async def main():
 
     kernel = SkUtility.createKernelWithCompletion()
 
+    # 导入文件夹中预定义的Chat方法
+    semantic_functions = kernel.import_semantic_skill_from_directory(
+        "./SemanticKernel", "SemanticFunctions")
+    print(semantic_functions.keys())
+    chat_function =  semantic_functions["Chat"]
+    # chat_function =  semantic_functions["ChatAndSummarize"]
+    print(chat_function.model_dump_json())
+
+
+
     history = []
 
     while True:
@@ -19,18 +29,11 @@ async def main():
         variables["request"] = request
         variables["history"] = "\n".join(history)
 
-        prompt = """对话历史如下:
-        {{$history}}
-        ---
-        User: {{$request}}
-        Assistant:  """
-
-        # 运行 prompt
-        chat_function = kernel.create_semantic_function(prompt)
         response = await kernel.run_async(
             chat_function,
             input_vars=variables, # 注意这里从 input_str 改为 input_vars
         )
+        print(response.model_dump_json())
 
         # 将新的一轮添加到 history 中
         history.append("User: " + request)

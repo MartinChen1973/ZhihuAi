@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "type": "completion",
-  "description": "根据历史，和当前的对话内容，执行多轮对话",
+  "description": "与用户进行多轮对话",
   "completion": {
     "max_tokens": 8000,
     "temperature": 0,
