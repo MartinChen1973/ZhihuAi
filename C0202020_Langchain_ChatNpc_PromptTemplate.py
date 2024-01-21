@@ -22,12 +22,12 @@ async def main():
 
     prompt_daxiong = template.format_messages(
             npc_name="大雄",
-            charactor="善良，胆小",            
+            charactor="善良，胆小，平时最害怕胖虎。",
             query="你是谁？"
         )
     prompt_panghu = template.format_messages(
             npc_name="胖虎",
-            charactor="粗鲁，没礼貌，莽撞，爱欺负人",
+            charactor="粗鲁，没礼貌，莽撞，爱欺负人，平时最爱欺负大雄。",
             query="你是谁？"
         )
 
