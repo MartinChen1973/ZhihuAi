@@ -1,0 +1,13 @@
+import calendar
+import dateutil.parser as parser
+from semantic_kernel.skill_definition import sk_function
+
+class DayOfWeek:
+    @sk_function(
+        description="计算输入日期是星期几",
+        name="weekday",
+    )
+    def weekday(self, date_str: str) -> str:
+        """Convert date to weekday name"""
+        d = parser.parse(date_str)
+        return calendar.day_name[d.weekday()]
